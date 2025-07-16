@@ -8,3 +8,8 @@ export type Card = {
   rarity: 'common' | 'uncommon' | 'rare' | 'mythic';
   image: string;
 };
+
+export type CardID = string;
+
+// Every drafted card instance gets a stable ID.
+export type CardCopy = Card & { _uid: CardID };
